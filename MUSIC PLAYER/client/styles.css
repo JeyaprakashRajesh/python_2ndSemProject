@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    background-color: black;
+    color: white;
+}
+
+.topContainer { 
+    height: 40%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.player {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+}
+
+#playPauseBtn {
+    height: max(3vh, 3vw);
+    width: max(3vh, 3vw);
+    background-color: transparent;
+    border: none;
+    background-size: contain;
+    background-position: center;
+    transition: transform 0.1s ease-in-out;
+}
+
+#playPauseBtn:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+#prevBtn {
+    height: max(3vh, 3vw);
+    width: max(3vh, 3vw);
+    background-image: url("../client/pics/nextprevious.png");
+    background-color: transparent;
+    border: none;
+    background-size: contain;
+    background-position: center;
+}
+
+#prevBtn:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+#nextBtn {
+    height: max(3vh, 3vw);
+    width: max(3vh, 3vw);
+    background-image: url("../client/pics/nextprevious.png");
+    background-color: transparent;
+    border: none;
+    background-size: contain;
+    background-position: center;
+    rotate: 180deg;
+    transition: transform 0.1s ease-in-out;
+}
+
+#nextBtn:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.player .info {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.player .info img {
+    height: 100px;
+    width: 100px;
+    margin-right: 20px;
+}
+
+.player .info .details {
+    flex: 1;
+}
+
+.player .info .details h3,
+.player .info .details p {
+    margin: 0;
+    font-size: 20px;
+    display: inline;
+}
+
+.controlBtn {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 30px;
+    width: 30px;
+    background-color: transparent;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.controlBtn:hover {
+
+}
+
+.controlBtn.liked {
+    background-image: url("../client/pics/heartfilled.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 30px;
+}
+
+.controlBtn.addedToPlaylist {
+    background-image: url("../client/pics/playlistadded.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 30px;
+}
+
+.controlBtn.defaultLike {
+    background-image: url("../client/pics/heart.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 30px;
+}
+.controlBtn.defaultPlaylist {
+    background-image: url("../client/pics/playlist.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 30px;
+    width: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.controlBtn.addedToPlaylist {
+    background-image: url("../client/pics/playlistfilled.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 30px;
+    width: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.controlBtn.defaultPlaylist {
+    background-image: url("../client/pics/playlist.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 30px;
+    width: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.audio-controls {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    margin-top: 10px;
+}
+
+.audio-controls button {
+    margin-right: 10px;
+}
+
+audio {
+    display: none;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 8px;
+    background: white;
+    border-radius: 5px;
+    overflow: hidden;
+    outline: none;
+    margin: 0 10px;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    height: 8px;
+    background: white;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    background: black;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: -100vw 0 0 100vw black;
+}
+
+input[type="range"]::-moz-range-track {
+    height: 8px;
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.bottomContainer {
+    height: 60%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.bottomLeft {
+    width: 20%;
+    height: 100%;
+}
+
+.bottomLeft div {
+    height: 33.33%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3vw;
+}
+
+.bottomLeft div:hover {
+    cursor: pointer;
+}
+
+.bottomRight {
+    width: 80%;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.musicItem {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    width: calc(100% - 40px);
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+    transition: transform 0.1s ease;
+}
+
+.musicItem:hover {
+    cursor: pointer;
+    transform: scale(1.02);
+}
+
+.musicItem img {
+    height: 40px;
+    width: auto;
+    margin-right: 10px;
+}
+
+.musicItem .details {
+    flex: 1;
+}
+
+.musicItem .details h3,
+.musicItem .details p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.musicItem button {
+    height: 30px;
+    margin-left: 10px;
+}

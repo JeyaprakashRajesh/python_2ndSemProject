@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <section class="topContainer">
+        <div class="player">
+            <div class="info">
+                <div class="details">
+                    <div>
+                        <h3 id="currentTitle">Play any music</h3>
+                        <button id="likeBtn" class="controlBtn defaultLike"></button>
+                        <button id="addToPlaylistBtn" class="controlBtn defaultPlaylist"></button>
+                    </div>
+                    <p id="currentArtist"></p>
+                </div>
+                <img id="currentPoster" src="" alt="Current song poster" style="display: none;">
+            </div>
+            <div class="audio-controls" style="display: none;">
+                <button id="prevBtn"></button>
+                <button id="playPauseBtn" style="background-image: url('../client/pics/playbutton.png');"></button>
+                <button id="nextBtn"></button>
+                <input type="range" id="seekBar" value="0" max="100">
+            </div>
+            <audio id="audioPlayer"></audio>
+        </div>
+    </section>
+    <section class="bottomContainer">
+        <section class="bottomLeft">
+            <div class="zall">all music</div>
+            <div class="playlist">playlist</div>
+            <div class="liked">liked music</div>
+        </section>
+        <section class="bottomRight"></section>
+    </section>
+    <script src="scripts.js"></script>
+</body>
+
+</html>
