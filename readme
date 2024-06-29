@@ -1,0 +1,3 @@
+This is the python music player made with python->django for backend and html css js for frontend.
+  ->Inside the administration Musics can be added and managed.
+  ->frontend consist of the music player which refers to the storage space of the music and plays it.
